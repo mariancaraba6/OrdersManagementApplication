@@ -18,16 +18,6 @@ public class Main extends Application {
         stage.setTitle("Order Management Application");
         stage.setScene(scene);
         stage.show();
-        showAlertInformation();
-    }
-
-    private void showAlertInformation() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("This is an information alert.");
-
-        alert.showAndWait();
     }
 
     public static void main(String[] args) {

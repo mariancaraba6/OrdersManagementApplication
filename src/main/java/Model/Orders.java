@@ -5,6 +5,14 @@ public class Orders {
     private int clientId;
     private int productId;
     private int orderQuantity;
+    public Orders() {
+    }
+    public Orders(int orderId, int clientId, int productId, int orderQuantity) {
+        this.orderId = orderId;
+        this.clientId = clientId;
+        this.productId = productId;
+        this.orderQuantity = orderQuantity;
+    }
 
     public int getOrderId() {
         return orderId;

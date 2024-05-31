@@ -28,8 +28,12 @@ public class MainController {
     private Button onProducts;
 
     @FXML
-    void switchToBillsScene(ActionEvent event) {
-        //TODO:
+    void switchToBillsScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("billsScene.fxml")));
+        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

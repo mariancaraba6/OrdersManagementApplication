@@ -1,5 +1,8 @@
 package Presentation;
 
+import Model.Orders;
+import Model.Products;
+import Utils.TableViewUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +15,11 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
+
+import static BusinessLogic.OrdersBLL.findAllOrders;
+import static BusinessLogic.ProductsBLL.findAllProducts;
 
 public class ViewAllOrdersController {
 
@@ -35,11 +42,12 @@ public class ViewAllOrdersController {
     private Button showTable;
 
     @FXML
-    private TableView<?> tableView;
+    private TableView<Orders> tableView;
 
     @FXML
     void handleClicks(ActionEvent event) {
-
+        List<Orders> productsList = findAllOrders();
+        TableViewUtil.populateTable(tableView, productsList);
     }
 
     @FXML

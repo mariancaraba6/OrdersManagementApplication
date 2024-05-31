@@ -19,7 +19,6 @@ public class OrdersBLL {
     public static void insertOrder(Orders order) {
         OrdersDAO ordersDAO = new OrdersDAO();
         ordersDAO.insert(order);
-
     }
 
     public static void editOrder (Orders order) {

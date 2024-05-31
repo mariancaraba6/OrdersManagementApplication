@@ -17,14 +17,14 @@ import Connection.ConnectionFactory;
 public class AbstractDAO<T> {
     protected static final Logger LOGGER = Logger.getLogger(AbstractDAO.class.getName());
 
-    private final Class<T> type;
+    protected final Class<T> type;
 
     @SuppressWarnings("unchecked")
     public AbstractDAO() {
         this.type = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
     }
 
-    private String createSelectAllQuery() {
+    protected String createSelectAllQuery() {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ");
         sb.append(type.getSimpleName());

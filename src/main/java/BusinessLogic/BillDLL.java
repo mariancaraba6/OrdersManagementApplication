@@ -13,12 +13,7 @@ public class BillDLL {
         return billDAO.findAll();
     }
 
-    public static Bill findBillById(int id) {
-        BillDAO billDAO = new BillDAO();
-        return billDAO.findById(id, "billId");
-    }
-
-    public static void insertOrder(Bill bill) {
+    public static void insertBill(Bill bill) {
         BillDAO billDAO = new BillDAO();
         billDAO.insert(bill);
 
