@@ -1,5 +1,6 @@
 package Presentation;
 
+import Model.Products;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
+
+import static BusinessLogic.ProductsBLL.editProduct;
+import static BusinessLogic.ProductsBLL.insertProduct;
 
 public class EditProductController {
 
@@ -50,7 +54,13 @@ public class EditProductController {
 
     @FXML
     void handleClicks(ActionEvent event) {
-
+        int id = Integer.parseInt(modProductId.getText());
+        String name = modProductName.getText();
+        String description = modProductDescription.getText();
+        double price = Double.parseDouble(modProductPrice.getText());
+        int quantity = Integer.parseInt(modProductQuantity.getText());
+        Products product = new Products(id, name, description, price, quantity);
+        editProduct(product);
     }
 
     @FXML

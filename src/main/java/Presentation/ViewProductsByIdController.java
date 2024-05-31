@@ -1,5 +1,9 @@
 package Presentation;
 
+import Model.Clients;
+import Model.Products;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +14,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
+
+import static BusinessLogic.ClientsBLL.findClientById;
+import static BusinessLogic.ProductsBLL.findProductById;
 
 public class ViewProductsByIdController {
 
@@ -42,11 +50,19 @@ public class ViewProductsByIdController {
     private Button showTable;
 
     @FXML
-    private TableView<?> tableView;
+    private TableView<Products> tableView;
 
     @FXML
     void handleClicks(ActionEvent event) {
-
+        col1.setCellValueFactory(new PropertyValueFactory<>("productId"));
+        col2.setCellValueFactory(new PropertyValueFactory<>("productName"));
+        col3.setCellValueFactory(new PropertyValueFactory<>("description"));
+        col4.setCellValueFactory(new PropertyValueFactory<>("price"));
+        col5.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        int id = Integer.parseInt(idFilter.getText());
+        Products product = findProductById(id);
+        ObservableList<Products> productObservableList = FXCollections.observableArrayList(product);
+        tableView.setItems(productObservableList);
     }
 
     @FXML

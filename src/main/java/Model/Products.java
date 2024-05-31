@@ -4,8 +4,19 @@ public class Products {
     private int productId;
     private String productName;
     private String description;
-    private float price;
+    private double price;
     private int quantity;
+
+    public Products() {
+    }
+
+    public Products(int productId, String productName, String description, double price, int quantity) {
+        this.productId = productId;
+        this.productName = productName;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+    }
 
     public int getProductId() {
         return productId;
@@ -31,11 +42,11 @@ public class Products {
         this.description = description;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

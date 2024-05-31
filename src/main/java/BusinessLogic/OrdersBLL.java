@@ -13,7 +13,7 @@ public class OrdersBLL {
 
     public static Orders findOrderById(int id) {
         OrdersDAO ordersDAO = new OrdersDAO();
-        return ordersDAO.findById(id);
+        return ordersDAO.findById(id, "orderId");
     }
 
     public static void insertOrder(Orders order) {
@@ -27,8 +27,8 @@ public class OrdersBLL {
         ordersDAO.update(order, "orderId");
     }
 
-    public static void deleteOrder (Orders order) {
+    public static void deleteOrder (int idToBeDeleted) {
         OrdersDAO ordersDAO = new OrdersDAO();
-        ordersDAO.delete(order, "orderId");
+        ordersDAO.delete(idToBeDeleted, "orderId");
     }
 }

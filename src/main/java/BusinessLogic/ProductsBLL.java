@@ -13,7 +13,7 @@ public class ProductsBLL {
 
     public static Products findProductById(int id) {
         ProductsDAO productDAO = new ProductsDAO();
-        return productDAO.findById(id);
+        return productDAO.findById(id, "productId");
     }
 
     public static void insertProduct(Products product) {
@@ -26,9 +26,9 @@ public class ProductsBLL {
         productDAO.update(product, "productId");
     }
 
-    public static void deleteOrder (Products product) {
+    public static void deleteOrder (int idToBeDeleted) {
         ProductsDAO productDAO = new ProductsDAO();
-        productDAO.delete(product, "productId");
+        productDAO.delete(idToBeDeleted, "productId");
     }
 
 }

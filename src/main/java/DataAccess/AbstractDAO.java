@@ -61,11 +61,11 @@ public class AbstractDAO<T> {
         return sb.toString();
     }
 
-    public T findById(int id) {
+    public T findById(int id, String field) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        String query = createSelectQuery("id");
+        String query = createSelectQuery(field);
         try {
             connection = ConnectionFactory.getConnection();
             statement = connection.prepareStatement(query);
@@ -178,6 +178,7 @@ public class AbstractDAO<T> {
             idFieldObj.setAccessible(true);
             statement.setObject(iterator, idFieldObj.get(t));
             statement.executeUpdate();
+            System.out.println("Updated successfully!\n");
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, type.getName() + "DAO:update " + e.getMessage());
         } catch (IllegalAccessException e) {
@@ -198,21 +199,18 @@ public class AbstractDAO<T> {
         return sb.toString();
     }
 
-    public void delete (T t, String idField) {
+    public void delete (int idToBeDeleted, String idField) {
         Connection connection = null;
         PreparedStatement statement = null;
         String query = createDeleteQuery(idField);
         try {
             connection = ConnectionFactory.getConnection();
             statement = connection.prepareStatement(query);
-            Field idFieldObj = type.getDeclaredFields()[0];
-            idFieldObj.setAccessible(true);
-            statement.setObject(1, idFieldObj.get(t));
-            statement.executeUpdate();;
+            statement.setObject(1, idToBeDeleted);
+            statement.executeUpdate();
+            System.out.println("Deleted successfully!\n");
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, type.getName() + "DAO:delete " + e.getMessage());
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
         } finally {
             ConnectionFactory.close(statement);
             ConnectionFactory.close(connection);

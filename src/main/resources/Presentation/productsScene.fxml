@@ -32,7 +32,12 @@
             <Font name="Berlin Sans FB Demi Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="viewProductById" layoutX="169.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToViewProductByIdScene" prefHeight="65.0" prefWidth="186.0" style="-fx-background-color: #44B7C2;" text="View Products By Id">
+      <Button fx:id="viewProductById" layoutX="251.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToViewProductByIdScene" prefHeight="65.0" prefWidth="186.0" style="-fx-background-color: #44B7C2;" text="View Products By Id">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteProduct" layoutX="95.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToDeleteProductScene" prefHeight="65.0" prefWidth="145.0" style="-fx-background-color: #44B7C2;" text="Delete Product">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="18.0" />
          </font>

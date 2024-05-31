@@ -1,5 +1,10 @@
 package Presentation;
 
+import Model.Clients;
+import Model.Products;
+import Utils.TableViewUtil;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,10 +14,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
+
+import static BusinessLogic.ClientsBLL.findAllClients;
+import static BusinessLogic.ProductsBLL.findAllProducts;
 
 public class ViewAllProductsController {
 
@@ -38,11 +48,20 @@ public class ViewAllProductsController {
     private Button showTable;
 
     @FXML
-    private TableView<?> tableView;
+    private TableView<Products> tableView;
 
     @FXML
     void handleClicks(ActionEvent event) {
-
+        List<Products> productsList = findAllProducts();
+        TableViewUtil.populateTable(tableView, productsList);
+//        col1.setCellValueFactory(new PropertyValueFactory<>("productId"));
+//        col2.setCellValueFactory(new PropertyValueFactory<>("productName"));
+//        col3.setCellValueFactory(new PropertyValueFactory<>("description"));
+//        col4.setCellValueFactory(new PropertyValueFactory<>("price"));
+//        col5.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+//        productsList = findAllProducts();
+//        ObservableList<Products> productsObservableList = FXCollections.observableArrayList(productsList);
+//        tableView.setItems(productsObservableList);
     }
 
     @FXML

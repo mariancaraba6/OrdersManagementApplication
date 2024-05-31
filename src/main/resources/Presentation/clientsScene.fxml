@@ -32,7 +32,12 @@
             <Font name="Berlin Sans FB Demi Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="viewClientById" layoutX="180.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToViewClientByIdScene" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #44B7C2;" text="View Client By Id">
+      <Button fx:id="viewClientById" layoutX="262.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToViewClientByIdScene" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #44B7C2;" text="View Client By Id">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteClient" layoutX="113.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToDeleteClientScene" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #44B7C2;" text="Delete Client">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="18.0" />
          </font>

@@ -14,7 +14,7 @@ public class ClientsBLL {
 
     public static Clients findClientById(int id) {
         ClientsDAO clientsDAO = new ClientsDAO();
-        return clientsDAO.findById(id);
+        return clientsDAO.findById(id, "clientId");
     }
 
     public static void insertClient(Clients client) {
@@ -27,8 +27,8 @@ public class ClientsBLL {
         clientsDAO.update(client, "clientId");
     }
 
-    public static void deleteClient(Clients client) {
+    public static void deleteClient(int idToBeDeleted) {
         ClientsDAO clientsDAO = new ClientsDAO();
-        clientsDAO.delete(client, "clientId");
+        clientsDAO.delete(idToBeDeleted, "clientId");
     }
 }
