@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="524.0" style="-fx-background-color: FFAE49;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ViewAllOrdersController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="14.0" prefHeight="76.0" prefWidth="229.0" text="View All Orders" textAlignment="CENTER" textFill="#024b7a" wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="goBack" layoutX="27.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToOrdersScene" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: FFFDB5;" text="Go back">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="showTable" layoutX="398.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: FFFDB5;" text="Show">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="43.0" layoutY="84.0" prefHeight="169.0" prefWidth="437.0">
+         <columns>
+            <TableColumn fx:id="col1" prefWidth="67.33334350585938" text="Order ID" />
+            <TableColumn fx:id="col2" prefWidth="75.99996948242188" text="Client ID" />
+            <TableColumn fx:id="col3" prefWidth="91.33331298828125" text="Product ID" />
+            <TableColumn fx:id="col4" prefWidth="79.99993896484375" text="Quantity" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

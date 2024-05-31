@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="524.0" style="-fx-background-color: FFAE49;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ClientsController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="14.0" prefHeight="76.0" prefWidth="229.0" text="Clients" textAlignment="CENTER" textFill="#024b7a" wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="goBack" layoutX="27.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: FFFDB5;" text="Go back">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="newClient" layoutX="27.0" layoutY="115.0" mnemonicParsing="false" onAction="#switchToAddNewClient" prefHeight="65.0" prefWidth="151.0" style="-fx-background-color: #44B7C2;" text="Add New Client">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="editClient" layoutX="200.0" layoutY="115.0" mnemonicParsing="false" onAction="#switchToEditClientScene" prefHeight="65.0" prefWidth="123.0" style="-fx-background-color: #44B7C2;" text="Edit Client">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewAllClients" layoutX="351.0" layoutY="115.0" mnemonicParsing="false" onAction="#switchToShowAllClients" prefHeight="65.0" prefWidth="151.0" style="-fx-background-color: #44B7C2;" text="View all Clients">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewClientById" layoutX="180.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToViewClientByIdScene" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #44B7C2;" text="View Client By Id">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

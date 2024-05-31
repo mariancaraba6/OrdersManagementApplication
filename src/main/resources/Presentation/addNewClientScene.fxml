@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="524.0" style="-fx-background-color: FFAE49;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.NewClientController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="14.0" prefHeight="76.0" prefWidth="229.0" text="Add New Client" textAlignment="CENTER" textFill="#024b7a" wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="goBack" layoutX="27.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToClientsScene" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: FFFDB5;" text="Go back">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newClientId" layoutX="147.0" layoutY="121.0" onAction="#handleClicks" prefHeight="25.0" prefWidth="101.0" />
+      <Button fx:id="clientNameLabel" layoutX="262.0" layoutY="117.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #44B7C2;" text="Client Name">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newClientName" layoutX="400.0" layoutY="121.0" onAction="#handleClicks" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="newClientAddress" layoutX="147.0" layoutY="168.0" onAction="#handleClicks" prefHeight="25.0" prefWidth="101.0" />
+      <Button fx:id="clientEmailLabel" layoutX="262.0" layoutY="164.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #44B7C2;" text="Email">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newClientEmail" layoutX="400.0" layoutY="168.0" onAction="#handleClicks" prefHeight="25.0" prefWidth="109.0" />
+      <Button fx:id="clientIdLabel" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #44B7C2;" text="Client ID">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="clientAddressLabel" layoutX="14.0" layoutY="164.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #44B7C2;" text="Address">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="clientAgeLabel" layoutX="14.0" layoutY="209.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #44B7C2;" text="Age">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newClientAge" layoutX="147.0" layoutY="213.0" onAction="#handleClicks" prefHeight="25.0" prefWidth="101.0" />
+      <Button fx:id="executeAdd" layoutX="400.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: FFFDB5;" text="Add">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
