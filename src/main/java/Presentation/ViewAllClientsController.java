@@ -1,7 +1,5 @@
 package Presentation;
 
-import BusinessLogic.ClientsBLL;
-import DataAccess.ClientsDAO;
 import Model.Clients;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,6 +21,10 @@ import java.util.Objects;
 
 import static BusinessLogic.ClientsBLL.findAllClients;
 
+/**
+ * This is the GUI class for viewing all the clients.
+ * We can either show all the clients or we can go back to the Clients scene where we can do other actions with the Clients table.
+ */
 public class ViewAllClientsController {
 
     @FXML

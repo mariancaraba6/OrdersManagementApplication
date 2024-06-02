@@ -27,6 +27,10 @@ import static BusinessLogic.OrdersBLL.insertOrder;
 import static BusinessLogic.ProductsBLL.editProduct;
 import static BusinessLogic.ProductsBLL.findProductById;
 
+/**
+ * This is the GUI class for adding an order.
+ * We can either add am order or we can go back to the Orders scene where we can do other actions with the Orders table.
+ */
 public class NewOrderController {
 
     @FXML

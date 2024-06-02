@@ -4,7 +4,12 @@ import DataAccess.OrdersDAO;
 import Model.Orders;
 
 import java.util.List;
-
+/**
+ * Class for the business logic of the Orders class.
+ * It is used to call the methods that were implemented in the AbstractDAO class that were extended in the OrdersDAO class
+ * @author maria
+ * @since June 2024
+ */
 public class OrdersBLL {
     public static List<Orders> findAllOrders() {
         OrdersDAO ordersDAO = new OrdersDAO();

@@ -21,6 +21,10 @@ import java.util.Objects;
 import static BusinessLogic.OrdersBLL.findAllOrders;
 import static BusinessLogic.ProductsBLL.findAllProducts;
 
+/**
+ * This is the GUI class for viewing all the Orders in the table.
+ * We can either do this or we can go back to the Orders scene where we can do other actions with the Orders table.
+ */
 public class ViewAllOrdersController {
 
     @FXML

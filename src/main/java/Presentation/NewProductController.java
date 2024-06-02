@@ -18,6 +18,10 @@ import java.util.Objects;
 import static BusinessLogic.ClientsBLL.insertClient;
 import static BusinessLogic.ProductsBLL.insertProduct;
 
+/**
+ * This is the GUI class for adding a product.
+ * We can either add a product or we can go back to the Products scene where we can do other actions with the Products table.
+ */
 public class NewProductController {
 
     @FXML

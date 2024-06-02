@@ -5,6 +5,12 @@ import Model.Products;
 
 import java.util.List;
 
+/**
+ * Class for the business logic of the Products class.
+ * It is used to call the methods that were implemented in the AbstractDAO class that were extended in the ProductsDAO class
+ * @author maria
+ * @since June 2024
+ */
 public class ProductsBLL {
     public static List<Products> findAllProducts() {
         ProductsDAO productDAO = new ProductsDAO();

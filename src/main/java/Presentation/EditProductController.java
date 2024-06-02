@@ -17,6 +17,10 @@ import java.util.Objects;
 import static BusinessLogic.ProductsBLL.editProduct;
 import static BusinessLogic.ProductsBLL.insertProduct;
 
+/**
+ * This is the GUI class for editing a product.
+ * We can either edit a product or we can go back to the Products scene where we can do other actions with the Products table.
+ */
 public class EditProductController {
 
     @FXML

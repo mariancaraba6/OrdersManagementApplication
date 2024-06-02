@@ -17,6 +17,10 @@ import java.util.Objects;
 import static BusinessLogic.ClientsBLL.deleteClient;
 import static BusinessLogic.ClientsBLL.editClient;
 
+/**
+ * This is the GUI class for deleting a client with a given id.
+ * We can either delete a client or we can go back to the Clients scene where we can do other actions with the Clients table.
+ */
 public class DeleteClientController {
 
     @FXML

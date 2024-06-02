@@ -1,5 +1,10 @@
 package Model;
 
+/**
+ * Represents the Clients class that is identical with the table in the database
+ * @author maria
+ * @since June 2024
+ */
 public class Clients {
     private int clientId;
     private String clientName;

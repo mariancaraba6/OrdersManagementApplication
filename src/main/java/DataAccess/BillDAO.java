@@ -12,6 +12,15 @@ import java.util.List;
 import java.util.logging.Level;
 
 import Connection.ConnectionFactory;
+
+/**
+ * This class is used to perform database operations related to Bill table, such as retrieving,
+ * inserting, editing, and deleting clients. It has separate implementation from the other classes because the createObject
+ * method from AbstractDAO calls the empty constructor, but the Bill table is implemented as a record and it cannot have an
+ * empty constructor.
+ * @author maria
+ * @since June 2024
+ */
 public class BillDAO extends AbstractDAO<Bill>{
     public List<Bill> findAll( ) {
         Connection connection = null;

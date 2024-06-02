@@ -12,6 +12,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * Represents a GUI frame for managing clients' data.
+ * From here we will choose whether to add, update, delete, or show all clients.
+ * We will also have the option to go back to the main scene.
+ */
 public class ClientsController {
 
     @FXML

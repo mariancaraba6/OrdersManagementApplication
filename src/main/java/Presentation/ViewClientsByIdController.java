@@ -23,6 +23,10 @@ import java.util.Objects;
 import static BusinessLogic.ClientsBLL.findAllClients;
 import static BusinessLogic.ClientsBLL.findClientById;
 
+/**
+ * This is the GUI class for viewing a client with a given ID.
+ * We can either show the client with the given ID or we can go back to the Clients scene where we can do other actions with the Clients table.
+ */
 public class ViewClientsByIdController {
 
     @FXML

@@ -9,6 +9,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.lang.reflect.Field;
 import java.util.List;
 
+/**
+ * This class uses reflection techniques to create a method that receives a list of objects
+ * and generates the header of the table by extracting through reflection the
+ * object properties and then populates the table with the values of the
+ * elements from the list.
+ */
 public class TableViewUtil {
 
     public static <T> void populateTable(TableView<T> tableView, List<T> dataList) {

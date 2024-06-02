@@ -17,6 +17,10 @@ import java.util.Objects;
 import static BusinessLogic.ClientsBLL.editClient;
 import static BusinessLogic.ClientsBLL.insertClient;
 
+/**
+ * This is the GUI class for editing a client.
+ * We can either edit a client or we can go back to the Clients scene where we can do other actions with the Clients table.
+ */
 public class EditClientController {
 
     @FXML

@@ -16,6 +16,10 @@ import java.util.Objects;
 
 import static BusinessLogic.ClientsBLL.insertClient;
 
+/**
+ * This is the GUI class for adding a client.
+ * We can either add a client or we can go back to the Clients scene where we can do other actions with the Clients table.
+ */
 public class NewClientController {
 
     @FXML

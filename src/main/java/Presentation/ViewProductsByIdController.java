@@ -23,6 +23,10 @@ import java.util.Objects;
 import static BusinessLogic.ClientsBLL.findClientById;
 import static BusinessLogic.ProductsBLL.findProductById;
 
+/**
+ * This is the GUI class for viewing a product by the given ID.
+ * We can either do this, or we can go back to the Products scene where we can do other actions with the Products table.
+ */
 public class ViewProductsByIdController {
 
     @FXML

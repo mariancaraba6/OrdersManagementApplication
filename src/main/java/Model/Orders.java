@@ -1,5 +1,10 @@
 package Model;
 
+/**
+ * Represents the Orders class that is identical with the table in the database
+ * @author maria
+ * @since June 2024
+ */
 public class Orders {
     private int orderId;
     private int clientId;

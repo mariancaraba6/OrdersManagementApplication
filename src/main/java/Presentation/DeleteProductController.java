@@ -15,6 +15,10 @@ import java.util.Objects;
 
 import static BusinessLogic.ClientsBLL.deleteClient;
 
+/**
+ * This is the GUI class for deleting a product with a given id.
+ * We can either delete a product or we can go back to the Products scene where we can do other actions with the Products table.
+ */
 public class DeleteProductController {
 
     @FXML

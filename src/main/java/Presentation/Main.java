@@ -10,6 +10,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This is the main class for the GUI
+ * From here we run the application
+ */
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {

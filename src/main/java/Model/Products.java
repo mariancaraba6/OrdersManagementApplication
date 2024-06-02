@@ -1,5 +1,10 @@
 package Model;
 
+/**
+ * Represents the Products class that is identical with the table in the database
+ * @author maria
+ * @since June 2024
+ */
 public class Products {
     private int productId;
     private String productName;

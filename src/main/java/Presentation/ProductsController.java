@@ -12,23 +12,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * Represents a GUI frame for managing products' data.
+ * From here we will choose whether to add, update, delete, or show all products.
+ * We will also have the option to go back to the main scene.
+ */
 public class ProductsController {
-
-    @FXML
-    private Button editProduct;
-
-    @FXML
-    private Button goBack;
-
-    @FXML
-    private Button newProduct;
-
-    @FXML
-    private Button viewAllProducts;
-
-    @FXML
-    private Button viewProductById;
-
     @FXML
     void switchToAddNewProduct(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addNewProductScene.fxml")));
@@ -76,7 +65,8 @@ public class ProductsController {
 
     @FXML
     void switchToDeleteProductScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteProductScene.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteProduct" +
+                "Scene.fxml")));
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

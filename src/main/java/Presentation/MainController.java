@@ -12,7 +12,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-
+/**
+ * This is the main GUI class and from here we can choose whether we want to make operations or to retrieve information from
+ * one of the tables: Clients, Products, Orders or Bills.
+ */
 public class MainController {
 
     @FXML

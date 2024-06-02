@@ -8,6 +8,12 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Class for the connection between the application and the database so that we could do database operations.
+ * This class provides methods to create, retrieve, and close connections to the database.
+ * @author maria
+ * @since June 2024
+ */
 public class ConnectionFactory {
 
     private static final Logger LOGGER = Logger.getLogger(ConnectionFactory.class.getName());

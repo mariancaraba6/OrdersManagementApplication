@@ -23,6 +23,10 @@ import static BusinessLogic.OrdersBLL.findOrderById;
 import static BusinessLogic.ProductsBLL.findAllProducts;
 import static BusinessLogic.ProductsBLL.findProductById;
 
+/**
+ * This is the GUI class for viewing an order by the given ID.
+ * We can either do this or we can go back to the Orders scene where we can do other actions with the Orders table.
+ */
 public class ViewOrdersByIdController {
 
     @FXML

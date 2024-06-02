@@ -23,10 +23,12 @@ import java.util.List;
 import java.util.Objects;
 
 import static BusinessLogic.BillDLL.findAllBills;
-import static BusinessLogic.ClientsBLL.findAllClients;
-import static BusinessLogic.OrdersBLL.findAllOrders;
 import static Utils.TableViewUtil.populateTable;
 
+/**
+ * Represents a GUI frame for managing bills data.
+ * From here we will choose to display all the bills.
+ */
 public class BillsController {
 
     @FXML

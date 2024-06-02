@@ -24,6 +24,10 @@ import java.util.Objects;
 import static BusinessLogic.ClientsBLL.findAllClients;
 import static BusinessLogic.ProductsBLL.findAllProducts;
 
+/**
+ * This is the GUI class for viewing all the products in the table.
+ * We can either do this, or we can go back to the Products scene where we can do other actions with the Products table.
+ */
 public class ViewAllProductsController {
 
     @FXML
@@ -54,14 +58,6 @@ public class ViewAllProductsController {
     void handleClicks(ActionEvent event) {
         List<Products> productsList = findAllProducts();
         TableViewUtil.populateTable(tableView, productsList);
-//        col1.setCellValueFactory(new PropertyValueFactory<>("productId"));
-//        col2.setCellValueFactory(new PropertyValueFactory<>("productName"));
-//        col3.setCellValueFactory(new PropertyValueFactory<>("description"));
-//        col4.setCellValueFactory(new PropertyValueFactory<>("price"));
-//        col5.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-//        productsList = findAllProducts();
-//        ObservableList<Products> productsObservableList = FXCollections.observableArrayList(productsList);
-//        tableView.setItems(productsObservableList);
     }
 
     @FXML

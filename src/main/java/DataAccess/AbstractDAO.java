@@ -14,6 +14,17 @@ import java.util.logging.Logger;
 
 import Connection.ConnectionFactory;
 
+/**
+ * Represents a generic Data Access Object that provides common database operations
+ * for working with objects of any type.
+ * This class serves as a base class for specific DAO implementations and includes generic methods
+ * for object retrieval, insertion, editing, and deletion. It also provides a method for retrieving object IDs based on field values.
+ * The AbstractDAO class utilizes Java reflection to dynamically generate SQL queries based on the
+ * structure of the object's class and the provided id column name
+ * @author maria
+ * @since June 2024
+ * @param <T> the type of object managed by the DAO
+ */
 public class AbstractDAO<T> {
     protected static final Logger LOGGER = Logger.getLogger(AbstractDAO.class.getName());
 
